@@ -34,10 +34,8 @@
     </div>
     <div class="nav__center">
       <ul class="nav__links" id="navLinks">
-        <li><a href="#konzept">Konzept</a></li>
         <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#atelier">Galerie</a></li>
-        <li><a href="#team">Team</a></li>
+        <li><a href="#konzept">Konzept</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
@@ -54,21 +52,26 @@
   <header class="hero">
     <div class="hero__left">
       <div class="hero__eyebrow">
-        <span class="hero__eyebrow-label">Exklusiver Haarsalon</span>
+        <span class="hero__eyebrow-label">Haarsalon mit Ruhe</span>
         <div class="hero__eyebrow-dots"><span></span><span></span><span></span></div>
         <span class="hero__eyebrow-label">Amberg</span>
       </div>
       <h1 class="hero__title">
-        <span class="hero__title-line">HAARE</span>
-        <span class="hero__title-line hero__title-line--outline">NEU</span>
-        <span class="hero__title-line hero__title-line--italic">denken.</span>
+        <span class="hero__title-line">C. W.</span>
+        <span class="hero__title-line hero__title-line--outline">Ihr Friseur</span>
+        <span class="hero__title-line hero__title-line--italic">in Amberg.</span>
       </h1>
       <div class="hero__divider"></div>
       <p class="hero__sub">
-        Wir schneiden, färben und gestalten mit der Präzision eines
-        Handwerkers und der Vision eines Künstlers. Kein Lärm. Kein
-        Stress — nur Ihr Haar, im Mittelpunkt.
+        Ehrliche Beratung, präzise Schnitte und Farbe, die zu dir, deinem
+        Alltag und deiner Haarstruktur passt. Persönlich, ruhig und ohne
+        Hektik.
       </p>
+      <div class="hero__facts" aria-label="Salon Schwerpunkte">
+        <span>Beratung</span>
+        <span>Schnitt</span>
+        <span>Farbe</span>
+      </div>
       <a href="#kontakt" class="hero__cta">
         <span>Termin vereinbaren</span>
         <span class="hero__cta-arrow">
@@ -79,7 +82,13 @@
       </a>
     </div>
     <div class="hero__right">
-      <div class="hero__img"></div>
+      <div class="hero__gallery" aria-label="Ambiente Galerie">
+        <img class="hero__gallery-img hero__gallery-img--active" src="assets/bilder/_ambiente/PXL_20260515_090300006.MP.jpg" alt="Salon Ambiente" />
+        <img class="hero__gallery-img" src="assets/bilder/_ambiente/PXL_20260515_090243749.jpg" alt="Salon Ambiente" />
+        <img class="hero__gallery-img" src="assets/bilder/_ambiente/PXL_20260515_090234083.jpg" alt="Salon Ambiente" />
+        <img class="hero__gallery-img" src="assets/bilder/_ambiente/PXL_20260515_090200991.jpg" alt="Salon Ambiente" />
+        <img class="hero__gallery-img" src="assets/bilder/_ambiente/PXL_20260515_090128706.MP.jpg" alt="Salon Ambiente" />
+      </div>
       <div class="hero__badge">
         <span class="hero__badge-label">Geöffnet</span>
         <span class="hero__badge-val">Mo – Fr · 09–17:30</span>
@@ -87,240 +96,117 @@
     </div>
   </header>
 
-  <!-- TICKER -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>Schnitt &amp; Styling</span><span class="dot">◆</span>
-      <span>Farbe &amp; Highlights</span><span class="dot">◆</span>
-      <span>Balayage</span><span class="dot">◆</span>
-      <span>Bridal &amp; Events</span><span class="dot">◆</span>
-      <span>Treatments</span><span class="dot">◆</span>
-      <span>Herrenschnitt</span><span class="dot">◆</span>
-      <span>Kinderschnitt</span><span class="dot">◆</span>
-      <span>Schnitt &amp; Styling</span><span class="dot">◆</span>
-      <span>Farbe &amp; Highlights</span><span class="dot">◆</span>
-      <span>Balayage</span><span class="dot">◆</span>
-      <span>Bridal &amp; Events</span><span class="dot">◆</span>
-      <span>Treatments</span><span class="dot">◆</span>
-      <span>Herrenschnitt</span><span class="dot">◆</span>
-      <span>Kinderschnitt</span><span class="dot">◆</span>
+  <!-- LEISTUNGEN — Bento Grid -->
+  <section class="services" id="leistungen">
+    <div class="services__header fade-up">
+      
+      <h2 class="services__title">Unsere Leistungen<br />perfekt auf <br />dich abgestimmt.</h2>
+      <p class="services__intro">
+        Transparent, ehrlich und auf dein Ziel abgestimmt. Die finalen Preise
+        richten sich nach Aufwand, Haarlänge und Beratung.
+      </p>
     </div>
-  </div>
+    <div class="svc-grid">
+      <div class="svc-card svc-card--dark">
+        <div>
+          <div class="svc-card__num">01</div>
+          <h3 class="svc-card__title">Schnitt<br />&amp; Styling</h3>
+          <p class="svc-card__desc">Form, Bewegung und Finish passend zu Gesicht, Haarstruktur und Alltag.</p>
+        </div>
+        <div class="svc-card__footer">
+          <span class="svc-card__price">ab 35 €</span>
+        </div>
+        <div class="svc-card__progress"></div>
+      </div>
 
-  <!-- TRUST STRIP -->
-  <div class="trust fade-up">
-    <div class="trust__item">
-      <span class="trust__num">4,9★</span>
-      <span class="trust__label">Google Bewertung</span>
+      <div class="svc-card svc-card--mid">
+        <div>
+          <div class="svc-card__num">02</div>
+          <h3 class="svc-card__title">Farbe<br />&amp; Highlights</h3>
+          <p class="svc-card__desc">Natürliche Tiefe, Glanz und Nuancen, die zum Hautton und Stil passen.</p>
+        </div>
+        <div class="svc-card__footer">
+          <span class="svc-card__price">ab 55 €</span>
+        </div>
+        <div class="svc-card__progress"></div>
+      </div>
+
+      <div class="svc-card svc-card--mid">
+        <div>
+          <div class="svc-card__num">03</div>
+          <h3 class="svc-card__title">Balayage<br />&amp; Glossing</h3>
+          <p class="svc-card__desc">Weiche Übergänge, frische Reflexe und gepflegter Glanz ohne harte Kanten.</p>
+        </div>
+        <div class="svc-card__footer">
+          <span class="svc-card__price">ab 85 €</span>
+        </div>
+        <div class="svc-card__progress"></div>
+      </div>
+
+      <div class="svc-card svc-card--dark">
+        <div>
+          <div class="svc-card__num">04</div>
+          <h3 class="svc-card__title">Pflege<br />&amp; Finish</h3>
+          <p class="svc-card__desc">Aufbauende Treatments, Styling und Tipps, damit dein Haar länger schön bleibt.</p>
+        </div>
+        <div class="svc-card__footer">
+          <span class="svc-card__price">ab 45 €</span>
+        </div>
+        <div class="svc-card__progress"></div>
+      </div>
     </div>
-    <div class="trust__item">
-      <span class="trust__num">15+</span>
-      <span class="trust__label">Jahre Erfahrung</span>
+    <div class="services__booking">
+      <span>Unsicher, was du brauchst?</span>
+      <p>Ruf kurz an oder frag deinen Termin an. Wir beraten dich ehrlich, bevor etwas entschieden wird.</p>
+      <a href="#kontakt">Kontakt aufnehmen →</a>
     </div>
-    <div class="trust__item">
-      <span class="trust__num">500+</span>
-      <span class="trust__label">Zufriedene Kunden</span>
-    </div>
-  </div>
+  </section>
 
   <!-- KONZEPT -->
   <section class="konzept" id="konzept">
     <div class="konzept__grid fade-up">
       <div class="konzept__left">
-        <span class="tag">— Unser Konzept</span>
-        <h2 class="konzept__title">Weniger.<br /><em>Besser.</em><br />Echter.</h2>
+        <span class="tag">— Unser Team</span>
+        <h2 class="konzept__title">Ankommen.<br /><em>Beraten.</em><br />Wohlfühlen.</h2>
       </div>
       <div class="konzept__right">
         <p class="konzept__text">
-          Mitten in Amberg haben wir einen Ort geschaffen, an dem Handwerk
-          und Ästhetik sich begegnen. Seit über 15 Jahren begleiten wir unsere
-          Kunden — mit ehrlicher Beratung, präziser Arbeit und einem Gespür
-          für das, was wirklich zu Ihnen passt.
+          Mitten in Amberg entsteht dein Look in Ruhe: Wir hören zu, schauen
+          genau hin und empfehlen nur, was zu dir und deinem Haar passt.
         </p>
         <p class="konzept__text">
-          Keine Warteschlangen, keine Kompromisse. Nur der Moment, Sie und
-          Ihr Haar im Mittelpunkt.
+          Ob neuer Schnitt, frische Farbe oder Pflege: Du bekommst klare
+          Beratung, sauberes Handwerk und ein Ergebnis, das auch nach dem
+          Salonbesuch funktioniert.
         </p>
-        <div class="konzept__stats">
-          <div class="stat">
-            <span class="stat__num">15+</span>
-            <span class="stat__label">Jahre im Handwerk</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">4</span>
-            <span class="stat__label">Spezialisten</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">∞</span>
-            <span class="stat__label">Wiederkehrer</span>
+        <div class="konzept__points">
+          <div class="konzept__points-track">
+            <span>Persönliche Beratung</span>
+            <span>Ruhige Atmosphäre</span>
+            <span>Alltagstauglicher Look</span>
+            <span class="konzept__point-clone" aria-hidden="true">Persönliche Beratung</span>
+            <span class="konzept__point-clone" aria-hidden="true">Ruhige Atmosphäre</span>
+            <span class="konzept__point-clone" aria-hidden="true">Alltagstauglicher Look</span>
           </div>
         </div>
       </div>
     </div>
-    <div class="konzept__img-row">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Salon Innenraum" loading="lazy" />
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Haarbearbeitung" loading="lazy" />
-      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Haar Styling" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- LEISTUNGEN — Bento Grid -->
-  <section class="services" id="leistungen">
-    <div class="services__header fade-up">
-      <span class="tag">— Leistungen</span>
-      <h2 class="services__title">Was wir<br />meisterhaft<br />beherrschen.</h2>
-    </div>
-    <div class="svc-grid">
-      <!-- Card 1: Dark -->
-      <div class="svc-card svc-card--dark">
-        <div>
-          <div class="svc-card__num">01</div>
-          <h3 class="svc-card__title">Schnitt<br />&amp; Styling</h3>
-          <p class="svc-card__desc">Präzision trifft Persönlichkeit. Für jede Haarstruktur, jeden Lifestyle — abgestimmt auf Ihre Gesichtsform.</p>
-        </div>
-        <div class="svc-card__footer">
-          <span class="svc-card__price">ab 35 €</span>
-          <span class="svc-card__arrow">→</span>
-        </div>
-        <div class="svc-card__progress"></div>
-      </div>
-
-      <!-- Card 2: Image -->
-      <div class="svc-card svc-card--image"
-        style="background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80')">
-      </div>
-
-      <!-- Card 3: Mid -->
-      <div class="svc-card svc-card--mid">
-        <div>
-          <div class="svc-card__num">02</div>
-          <h3 class="svc-card__title">Farbe<br />&amp; Highlights</h3>
-          <p class="svc-card__desc">Dimensionale Farben mit Tiefe. Von subtil bis dramatisch — immer mit Gefühl für Ihr Haar.</p>
-        </div>
-        <div class="svc-card__footer">
-          <span class="svc-card__price">ab 55 €</span>
-          <span class="svc-card__arrow">→</span>
-        </div>
-        <div class="svc-card__progress"></div>
-      </div>
-
-      <!-- Card 4: Mid -->
-      <div class="svc-card svc-card--mid">
-        <div>
-          <div class="svc-card__num">03</div>
-          <h3 class="svc-card__title">Bridal<br />&amp; Events</h3>
-          <p class="svc-card__desc">Der wichtigste Moment verdient den perfekten Look. Wir planen und gestalten gemeinsam mit Ihnen.</p>
-        </div>
-        <div class="svc-card__footer">
-          <span class="svc-card__price">ab 120 €</span>
-          <span class="svc-card__arrow">→</span>
-        </div>
-        <div class="svc-card__progress"></div>
-      </div>
-
-      <!-- Card 5: Dark -->
-      <div class="svc-card svc-card--dark">
-        <div>
-          <div class="svc-card__num">04</div>
-          <h3 class="svc-card__title">Haar&shy;<br />treatments</h3>
-          <p class="svc-card__desc">Tiefenwirksame Pflege. Rituale, die Ihr Haar von innen heraus regenerieren und leuchten lassen.</p>
-        </div>
-        <div class="svc-card__footer">
-          <span class="svc-card__price">ab 45 €</span>
-          <span class="svc-card__arrow">→</span>
-        </div>
-        <div class="svc-card__progress"></div>
-      </div>
-
-      <!-- Card 6: Image -->
-      <div class="svc-card svc-card--image"
-        style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80')">
-      </div>
-    </div>
-  </section>
-
-  <!-- ATELIER / GALERIE -->
-  <section class="atelier" id="atelier">
-    <div class="atelier__header fade-up">
-      <span class="tag">— Das Atelier</span>
-      <h2 class="atelier__title">Ein Ort.<br />Gemacht für<br />Stille &amp; Stil.</h2>
-    </div>
-    <div class="atelier__grid">
-      <div class="atelier__cell atelier__cell--tall reveal-image"
-        style="background-image:url('https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=700&q=80')"></div>
-      <div class="atelier__cell reveal-image"
-        style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80')"></div>
-      <div class="atelier__cell reveal-image"
-        style="background-image:url('https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=600&q=80')"></div>
-      <div class="atelier__cell atelier__cell--wide reveal-image"
-        style="background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80')"></div>
-    </div>
-    <div class="atelier__quote">
-      <blockquote>„Wer gut aussehen will, muss sich Zeit nehmen."</blockquote>
-    </div>
-  </section>
-
-  <!-- BEWERTUNGEN -->
-  <section class="reviews">
-    <div class="reviews__header fade-up">
-      <span class="tag">— Kundenstimmen</span>
-      <h2 class="reviews__title">Was unsere<br />Kunden sagen.</h2>
-    </div>
-    <div class="reviews__grid">
-      <div class="review fade-up">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__text">„Endlich ein Friseur, der wirklich zuhört. Das Ergebnis hat alle meine Erwartungen übertroffen — und das schon beim ersten Besuch."</p>
-        <span class="review__author">— Maria K. · Google</span>
-      </div>
-      <div class="review fade-up" style="transition-delay:0.1s">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__text">„Sehr freundlich, kompetent und das Ambiente ist einfach wunderschön. Ich komme seit Jahren hierher und bleibe dabei."</p>
-        <span class="review__author">— Thomas B. · Google</span>
-      </div>
-      <div class="review fade-up" style="transition-delay:0.2s">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__text">„Die Colorierung ist absolut sensationell. Meine Haare glänzen wie noch nie. Das Team ist unglaublich professionell."</p>
-        <span class="review__author">— Sophie L. · Google</span>
-      </div>
-    </div>
-    <div class="reviews__cta">
-      <a href="https://www.google.com" target="_blank" rel="noopener" class="reviews__google-link">
-        Alle Bewertungen auf Google ansehen →
-      </a>
-    </div>
-  </section>
-
-  <!-- TEAM -->
-  <section class="team" id="team">
-    <div class="team__header fade-up">
-      <span class="tag">— Das Team</span>
-      <h2 class="team__title">Die<br />Köpfe hinter<br />CW.</h2>
-    </div>
-    <div class="team__grid">
-      <div class="team__member">
-        <div class="team__photo"
-          style="background-image:url('https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=500&q=80')"></div>
-        <div class="team__info">
-          <span class="team__name">Kelly</span>
-          <span class="team__role">Gründerin &amp; Creative Director</span>
-        </div>
-      </div>
-      <div class="team__member">
-        <div class="team__photo"
-          style="background-image:url('https://images.unsplash.com/photo-1533461502717-83546f485d24?w=500&q=80')"></div>
-        <div class="team__info">
-          <span class="team__name">Johanna</span>
-          <span class="team__role">Colorist</span>
-        </div>
-      </div>
-      <div class="team__member">
-        <div class="team__photo"
-          style="background-image:url('https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=500&q=80')"></div>
-        <div class="team__info">
-          <span class="team__name">Sara</span>
-          <span class="team__role">Style Specialist</span>
-        </div>
-      </div>
+    <div class="konzept__img-row" data-portrait-gallery>
+      <button class="konzept__gallery-btn konzept__gallery-btn--prev" type="button" aria-label="Vorheriges Portrait">
+        <span aria-hidden="true">‹</span>
+      </button>
+      <figure class="konzept__portrait is-active">
+        <img src="assets/bilder/_potraits/PXL_20260515_091201238.PORTRAIT.jpg" alt="Salon-Portrait" loading="lazy" />
+      </figure>
+      <figure class="konzept__portrait">
+        <img src="assets/bilder/_potraits/PXL_20260515_091202201.PORTRAIT.jpg" alt="Salon-Portrait" loading="lazy" />
+      </figure>
+      <figure class="konzept__portrait">
+        <img src="assets/bilder/_potraits/PXL_20260515_091207764.PORTRAIT.jpg" alt="Salon-Portrait" loading="lazy" />
+      </figure>
+      <button class="konzept__gallery-btn konzept__gallery-btn--next" type="button" aria-label="Nächstes Portrait">
+        <span aria-hidden="true">›</span>
+      </button>
     </div>
   </section>
 
@@ -329,7 +215,7 @@
     <div class="kontakt__inner">
       <div class="kontakt__left">
         <span class="tag">— Kontakt</span>
-        <h2 class="kontakt__title">Dein Termin<br /><em>wartet.</em></h2>
+        <h2 class="kontakt__title">Lass dich<br /><em>direkt von uns</em><br />beraten.</h2>
         <div class="kontakt__info-grid">
           <div class="kontakt__info-item">
             <span class="kontakt__info-label">Adresse</span>
