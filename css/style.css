@@ -793,9 +793,9 @@ body.cursor-hover .cursor__ring::before {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(64, 45, 30, 0.16), transparent 42%),
-    linear-gradient(0deg, rgba(80, 56, 36, 0.16), transparent 54%),
-    linear-gradient(180deg, rgba(255, 247, 232, 0.12), transparent 34%);
+    linear-gradient(90deg, rgba(64, 45, 30, 0.08), transparent 42%),
+    linear-gradient(0deg, rgba(80, 56, 36, 0.08), transparent 54%),
+    linear-gradient(180deg, rgba(255, 247, 232, 0.04), transparent 34%);
   pointer-events: none;
   transition: opacity 0.45s ease;
 }
@@ -805,17 +805,17 @@ body.cursor-hover .cursor__ring::before {
   min-height: 236px;
   object-fit: cover;
   object-position: center 35%;
-  filter: brightness(1.07) contrast(1.02) saturate(1.12) sepia(7%);
+  filter: brightness(1.01) contrast(1.03) saturate(1.04) sepia(3%);
   transform: scale(1.03);
   transition:
     filter 0.55s ease,
     transform 0.55s ease;
 }
 .team__profile:hover .team__profile-media::after {
-  opacity: 0.6;
+  opacity: 0.45;
 }
 .team__profile:hover .team__profile-media img {
-  filter: brightness(1.07) contrast(1.02) saturate(1.12) sepia(7%);
+  filter: brightness(1.01) contrast(1.03) saturate(1.04) sepia(3%);
   transform: scale(1);
 }
 .team__profile-body {
@@ -931,9 +931,9 @@ body.cursor-hover .cursor__ring::before {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(64, 45, 30, 0.16), transparent 42%),
-    linear-gradient(0deg, rgba(80, 56, 36, 0.16), transparent 54%),
-    linear-gradient(180deg, rgba(255, 247, 232, 0.12), transparent 34%);
+    linear-gradient(90deg, rgba(64, 45, 30, 0.08), transparent 42%),
+    linear-gradient(0deg, rgba(80, 56, 36, 0.08), transparent 54%),
+    linear-gradient(180deg, rgba(255, 247, 232, 0.04), transparent 34%);
   pointer-events: none;
 }
 .team__slide.is-active {
@@ -947,7 +947,7 @@ body.cursor-hover .cursor__ring::before {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(1.07) contrast(1.02) saturate(1.12) sepia(7%);
+  filter: brightness(1.01) contrast(1.03) saturate(1.04) sepia(3%);
 }
 .team__gallery-btn {
   position: absolute;
