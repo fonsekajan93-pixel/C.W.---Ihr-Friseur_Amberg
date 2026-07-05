@@ -135,6 +135,19 @@ const iv = setInterval(() => {
 
 /* ---- NAV SCROLL ---- */
 const nav = document.getElementById("nav");
+const siteBasePath = (() => {
+  const script = document.currentScript || document.querySelector('script[src*="js/script.js"]');
+
+  if (!script) {
+    return "/";
+  }
+
+  try {
+    return new URL("../", new URL(script.getAttribute("src"), window.location.href)).pathname;
+  } catch (error) {
+    return "/";
+  }
+})();
 const cleanCurrentUrl = () => {
   const cleanPath = window.location.pathname
     .replace(/index\.html$/i, "")
@@ -144,6 +157,25 @@ const cleanCurrentUrl = () => {
   if (cleanPath !== window.location.pathname || window.location.hash) {
     history.replaceState(null, "", cleanPath + window.location.search);
   }
+};
+const normalizeInternalLinks = () => {
+  const pageLinks = new Map([
+    ["index.html", ""],
+    ["impressum.html", "impressum.html"],
+    ["datenschutz.html", "datenschutz.html"],
+  ]);
+
+  document.querySelectorAll("a[href]").forEach((a) => {
+    const href = a.getAttribute("href");
+
+    if (pageLinks.has(href)) {
+      a.setAttribute("href", siteBasePath + pageLinks.get(href));
+    }
+  });
+
+  document.querySelectorAll("[data-scroll-target]").forEach((a) => {
+    a.setAttribute("href", siteBasePath);
+  });
 };
 const scrollToSection = (targetId, behavior = "smooth") => {
   const target = targetId && document.getElementById(targetId);
@@ -162,6 +194,7 @@ try {
   storedScrollTarget = "";
 }
 
+normalizeInternalLinks();
 cleanCurrentUrl();
 
 if (storedScrollTarget || initialHashTarget) {
