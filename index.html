@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C. W. Ihr Friseur — Amberg</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+      <div class="loader__inner">
+        <span class="loader__text">C. W. Ihr Friseur</span>
+        <div class="loader__bar">
+          <div class="loader__fill" id="loaderFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <div class="nav__brand">
+        <span class="nav__brand-main">C. W.</span>
+        <span class="nav__brand-sub">Ihr Friseur</span>
+      </div>
+      <div class="nav__center">
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#team">Unser Team</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="nav__right">
+        <a href="tel:0962196548" class="nav__tel">09621 965488</a>
+        <a href="#kontakt" class="nav__cta"><span>Termin anfragen</span></a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO — Split Editorial -->
+    <header class="hero">
+      <div class="hero__left">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-label">Haarsalon mit Ruhe</span>
+          <div class="hero__eyebrow-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="hero__eyebrow-label">Amberg</span>
+        </div>
+        <h1 class="hero__title">
+          <span class="hero__title-line">C. W.</span>
+          <span class="hero__title-line hero__title-line--outline"
+            >Ihr Friseur</span
+          >
+          <span class="hero__title-line hero__title-line--italic"
+            >in Amberg.</span
+          >
+        </h1>
+        <div class="hero__divider"></div>
+        <p class="hero__sub">
+          Ehrliche Beratung, präzise Schnitte und Farbe, die zu dir, deinem
+          Alltag und deiner Haarstruktur passt. Persönlich, ruhig und ohne
+          Hektik.
+        </p>
+        <div class="hero__facts" aria-label="Salon Schwerpunkte">
+          <span>Beratung</span>
+          <span>Schnitt</span>
+          <span>Farbe</span>
+        </div>
+        <a href="#kontakt" class="hero__cta">
+          <span>Termin vereinbaren</span>
+          <span class="hero__cta-arrow">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="hero__right" aria-label="Eindruecke aus dem Salon">
+        <div class="hero__gallery">
+          <img
+            class="hero__gallery-img hero__gallery-img--active"
+            src="assets/bilder/_heroBilder/01_AnsichtAußen.jpg"
+            alt="Aussenansicht von C. W. Ihr Friseur"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <img
+            class="hero__gallery-img"
+            src="assets/bilder/_heroBilder/02_Kasse.jpg"
+            alt="Empfang und Kassenbereich im Salon"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero__gallery-img"
+            src="assets/bilder/_heroBilder/03_WarteBereich.jpg"
+            alt="Wartebereich im Salon"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero__gallery-img"
+            src="assets/bilder/_heroBilder/04_Arbeitsbereich.jpg"
+            alt="Arbeitsbereich im Salon"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="hero__gallery-img"
+            src="assets/bilder/_heroBilder/05_Arbeitsbereich.jpg"
+            alt="Weiterer Arbeitsbereich im Salon"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- LEISTUNGEN — Bento Grid -->
+    <section class="services" id="leistungen">
+      <div class="services__header fade-up">
+        <h2 class="services__title">
+          <span>Unsere Leistungen</span>
+          <span>perfekt auf dich abgestimmt.</span>
+        </h2>
+      </div>
+      <div
+        class="services__highlights fade-up"
+        aria-label="Leistungen und Preise"
+      >
+        <details class="service-highlight">
+          <summary class="service-highlight__summary">
+            <div>
+              <h3>Damen</h3>
+              <p>
+                Schnitt, Styling, Föhnen und Legen abgestimmt auf Haarlänge,
+                Struktur und Alltag.
+              </p>
+            </div>
+            <strong class="service-highlight__price">ab 26,50 €</strong>
+            <span class="service-highlight__cue">
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--closed"
+                >Preise ansehen</span
+              >
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--open"
+                >Preise ausblenden</span
+              >
+              <span class="service-highlight__icon" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <div class="service-highlight__panel">
+            <ul class="price-list">
+              <li><span>Trocken schneiden</span><strong>ab 26,50 €</strong></li>
+              <li>
+                <span>Waschen / Schneiden</span><strong>ab 30,00 €</strong>
+              </li>
+              <li>
+                <span>Waschen / Schneiden / Föhnen</span
+                ><strong>ab 40,00 €</strong>
+              </li>
+              <li>
+                <span>Waschen / Schneiden / Legen</span
+                ><strong>ab 40,00 €</strong>
+              </li>
+              <li><span>Waschen / Föhnen</span><strong>ab 32,00 €</strong></li>
+              <li><span>Waschen / Legen</span><strong>ab 30,00 €</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-highlight">
+          <summary class="service-highlight__summary">
+            <div>
+              <h3>Farbe &amp; Umformung</h3>
+              <p>
+                Tönen, Färben, Foliensträhnen und Dauerwelle mit ehrlicher
+                Beratung vorab.
+              </p>
+            </div>
+            <strong class="service-highlight__price">ab 32,00 €</strong>
+            <span class="service-highlight__cue">
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--closed"
+                >Preise ansehen</span
+              >
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--open"
+                >Preise ausblenden</span
+              >
+              <span class="service-highlight__icon" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <div class="service-highlight__panel">
+            <ul class="price-list">
+              <li><span>Tönen</span><strong>ab 35,00 €</strong></li>
+              <li><span>Färben</span><strong>ab 38,00 €</strong></li>
+              <li>
+                <span>Strähnen Folie Oberkopf</span><strong>ab 32,00 €</strong>
+              </li>
+              <li><span>Folie komplett</span><strong>ab 50,00 €</strong></li>
+              <li><span>Dauerwelle</span><strong>ab 60,00 €</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-highlight">
+          <summary class="service-highlight__summary">
+            <div>
+              <h3>Pflege &amp; Augenpartie</h3>
+              <p>Kleine Details, die den Look gepflegt abrunden.</p>
+            </div>
+            <strong class="service-highlight__price">ab 6,50 €</strong>
+            <span class="service-highlight__cue">
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--closed"
+                >Preise ansehen</span
+              >
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--open"
+                >Preise ausblenden</span
+              >
+              <span class="service-highlight__icon" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <div class="service-highlight__panel">
+            <ul class="price-list">
+              <li><span>Kur</span><strong>7,50 €</strong></li>
+              <li><span>Augenbrauen zupfen</span><strong>6,50 €</strong></li>
+              <li><span>Augenbrauen färben</span><strong>9,50 €</strong></li>
+              <li><span>Wimpern färben</span><strong>12,00 €</strong></li>
+              <li>
+                <span>Augenbrauen &amp; Wimpern färben</span
+                ><strong>18,00 €</strong>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-highlight">
+          <summary class="service-highlight__summary">
+            <div>
+              <h3>Herren</h3>
+              <p>
+                Klare Konturen, gepflegte Schnitte, Farbe und Bartpflege ohne
+                unnötigen Aufwand.
+              </p>
+            </div>
+            <strong class="service-highlight__price">ab 24,00 €</strong>
+            <span class="service-highlight__cue">
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--closed"
+                >Preise ansehen</span
+              >
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--open"
+                >Preise ausblenden</span
+              >
+              <span class="service-highlight__icon" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <div class="service-highlight__panel">
+            <ul class="price-list">
+              <li><span>Trocken schneiden</span><strong>ab 24,00 €</strong></li>
+              <li>
+                <span>Waschen / Schneiden</span><strong>ab 30,00 €</strong>
+              </li>
+              <li>
+                <span>Waschen / Schneiden / Föhnen</span
+                ><strong>ab 35,00 €</strong>
+              </li>
+              <li><span>Farbe komplett</span><strong>ab 38,00 €</strong></li>
+              <li><span>Bart komplett</span><strong>ab 15,00 €</strong></li>
+              <li><span>Schnauzer</span><strong>ab 9,00 €</strong></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-highlight">
+          <summary class="service-highlight__summary">
+            <div>
+              <h3>Kinder &amp; Jugendliche</h3>
+              <p>
+                Unkomplizierte Schnitte für Kinder und Jugendliche, ruhig und
+                sauber umgesetzt.
+              </p>
+            </div>
+            <strong class="service-highlight__price">ab 18,00 €</strong>
+            <span class="service-highlight__cue">
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--closed"
+                >Preise ansehen</span
+              >
+              <span
+                class="service-highlight__cue-label service-highlight__cue-label--open"
+                >Preise ausblenden</span
+              >
+              <span class="service-highlight__icon" aria-hidden="true">+</span>
+            </span>
+          </summary>
+          <div class="service-highlight__panel">
+            <ul class="price-list">
+              <li>
+                <span>Schneiden einfach · bis 12 Jahre</span
+                ><strong>ab 18,00 €</strong>
+              </li>
+              <li>
+                <span>Waschen / Schneiden / Föhnen · bis 12 Jahre</span
+                ><strong>nach Aufwand</strong>
+              </li>
+              <li>
+                <span>Schneiden einfach · ab 13 Jahre</span
+                ><strong>ab 25,00 €</strong>
+              </li>
+              <li>
+                <span>Waschen / Schneiden / Föhnen · ab 13 Jahre</span
+                ><strong>nach Aufwand</strong>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <p class="services__note fade-up">
+        Preise können je nach Haarlänge und Aufwand varrieren.
+      </p>
+      <div class="services__booking">
+        <span>Unsicher, was du brauchst?</span>
+        <p>
+          Ruf kurz an oder frag deinen Termin an. Wir beraten dich ehrlich,
+          bevor etwas entschieden wird.
+        </p>
+        <a href="#kontakt">Kontakt aufnehmen →</a>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+      <div class="team__intro fade-up">
+        <div class="team__headline">
+          <span class="tag">— Unser Team</span>
+          <h2 class="team__title">
+            Vertrauen beginnt bei den Menschen am Stuhl.
+          </h2>
+        </div>
+        <div class="team__copy">
+          <p>
+            Bei C. W. Ihr Friseur geht es nicht um schnelle Standardlösungen,
+            sondern um ehrliche Beratung, ruhiges Handwerk und ein Ergebnis, das
+            im Alltag wirklich zu dir passt.
+          </p>
+          <div class="team__points">
+            <div class="team__points-track">
+              <span>Persönliche Beratung</span>
+              <span>Ruhige Atmosphäre</span>
+              <span>Alltagstauglicher Look</span>
+              <span class="team__point-clone" aria-hidden="true"
+                >Persönliche Beratung</span
+              >
+              <span class="team__point-clone" aria-hidden="true"
+                >Ruhige Atmosphäre</span
+              >
+              <span class="team__point-clone" aria-hidden="true"
+                >Alltagstauglicher Look</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team__content">
+        <div class="team__profiles-wrap fade-up" data-team-profiles>
+          <button
+            class="team__profile-btn team__profile-btn--prev"
+            type="button"
+            aria-label="Vorheriges Teammitglied"
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="team__profiles">
+            <article class="team__profile">
+              <figure class="team__profile-media">
+                <img
+                  src="assets/bilder/_potraits/Inhaberin.jpg"
+                  alt="Inhaberin von C. W. Ihr Friseur"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="team__profile-body">
+                <span class="team__role">Inhaberin</span>
+                <h3>Chrissi - Die Powerfrau</h3>
+                <p>
+                  Seit der Eröffnung meines eigenen Salons arbeite ich gemeinsam
+                  mit Ingrid, meiner Kollegin und guten Freundin. Auch wenn sie
+                  lieber hinter als vor der Kamera steht, ist sie ein wichtiger
+                  Teil des Salons. Zusammen leben wir unsere Leidenschaft für
+                  das Friseurhandwerk, mit Herz, Gefühl und Liebe zum Detail.
+                </p>
+              </div>
+            </article>
+
+            <article class="team__profile">
+              <figure class="team__profile-media">
+                <img
+                  src="assets/bilder/_potraits/Cheffin.jpg"
+                  alt="Cheffin im Salon C. W. Ihr Friseur"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="team__profile-body">
+                <span class="team__role">Cheffin</span>
+                <h3>Mayla - Die treue Seele</h3>
+                <p>
+                  Vom Schnitt bis zum Finish zählt jedes Detail. Dafür hat die
+                  Cheffin einen besonderen Blick und überprüft akribisch jede
+                  Arbeit von ihrem Platz im Salon.
+                </p>
+              </div>
+            </article>
+          </div>
+          <button
+            class="team__profile-btn team__profile-btn--next"
+            type="button"
+            aria-label="Nächstes Teammitglied"
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+
+        <div class="team__craft fade-up" data-team-gallery>
+          <div class="team__craft-copy">
+            <span class="tag">— Handwerk</span>
+            <h3>Einblicke in echte Salonmomente.</h3>
+            <p data-team-gallery-text>
+              Persönliche Beratung ist der Anfang für einen Look, der wirklich
+              zur Kundin oder zum Kunden passt.
+            </p>
+            <div class="team__gallery-count" aria-label="Aktuelles Galeriebild">
+              <span data-team-gallery-index>01</span>
+              <span>/</span>
+              <span data-team-gallery-total>06</span>
+            </div>
+          </div>
+
+          <div class="team__slider" aria-label="Handwerk und Salonmomente">
+            <button
+              class="team__gallery-btn team__gallery-btn--prev"
+              type="button"
+              aria-label="Vorheriges Bild"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <figure
+              class="team__slide is-active"
+              data-caption="Persönliche Beratung ist der Anfang für einen Look, der wirklich zur Kundin oder zum Kunden passt. Ich bespreche ehrlich mit dir was möglich ist, was zu dir und deinem Haar passt und berate dich sehr gerne im Anschluss über Styling und Pflege, damit du dich auch so lange wie möglich an deinem neuen Look erfreuen kannst."
+            >
+              <img
+                src="assets/bilder/_gallerieHandwerk/Beratung.jpg"
+                alt="Beratung im Salon C. W. Ihr Friseur"
+                loading="lazy"
+              />
+            </figure>
+            <figure
+              class="team__slide"
+              data-caption="Gutes Handwerk braucht Ordnung so wie sauberes und qualitatives Arbeitsmaterial."
+            >
+              <img
+                src="assets/bilder/_gallerieHandwerk/Arbeitsmaterial.jpg"
+                alt="Arbeitsmaterial im Friseursalon"
+                loading="lazy"
+              />
+            </figure>
+            <figure
+              class="team__slide"
+              data-caption="Durch unsere Erfahrung kommen wir mit jedem Haartyp zurecht. Ob lockig, dünn oder widerspenstig, wir beraten und schneiden Typgerecht ."
+            >
+              <img
+                src="assets/bilder/_gallerieHandwerk/Locken.jpg"
+                alt="Gestylte Locken als Ergebnis aus dem Salon"
+                loading="lazy"
+              />
+            </figure>
+            <figure
+              class="team__slide"
+              data-caption="Kinder sind bei uns sehr gerne gesehen. Wir sehen ausgefallenen Kinderwünsche nicht als Stress, sondern als Herausforderung, welcher wir uns sehr gerne jedesmal aufs Neue stellen und das sehr erfolgreich wie ich mit Stolz behaupten darf."
+            >
+              <img
+                src="assets/bilder/_gallerieHandwerk/Kinderschnitt.jpg"
+                alt="Kinderschnitt im Salon C. W. Ihr Friseur"
+                loading="lazy"
+              />
+            </figure>
+            <figure
+              class="team__slide"
+              data-caption="Professionelle Pflegeprodukte unterstützen das Ergebnis. Doch das ist nicht alleine der Grund für die Wahl dieser Produkte, abgesehen von ihrer hochwertigkeit sind sie Tier- und Umweltfreundlich, ein Grund der mir als Hundemama die Wahl um einiges erleichtert hat"
+            >
+              <img
+                src="assets/bilder/_gallerieHandwerk/Produkte.jpg"
+                alt="Pflegeprodukte im Salon C. W. Ihr Friseur"
+                loading="lazy"
+              />
+            </figure>
+            <figure
+              class="team__slide"
+              data-caption="Wir möchten dass dein ganzer Aufenthalt so angenehm wie möglich ist. Da es trotz Termin leider auch zu Wartezeiten kommen kann, möchten wir dich in unseren gemütlichen Warteberich begrüßen. Dort wirst du von Mayla betreut und auf Wunsch mit kalten oder warmen Getränken versorgt ."
+            >
+              <img
+                src="assets/bilder/_gallerieHandwerk/EingangKomplett.jpg"
+                alt="Eingangsbereich von C. W. Ihr Friseur"
+                loading="lazy"
+              />
+            </figure>
+            <button
+              class="team__gallery-btn team__gallery-btn--next"
+              type="button"
+              aria-label="Nächstes Bild"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="kontakt" id="kontakt">
+      <div class="kontakt__inner">
+        <div class="kontakt__left">
+          <span class="tag">— Kontakt</span>
+          <h2 class="kontakt__title">
+            Lass dich<br /><em>direkt von uns</em><br />beraten.
+          </h2>
+          <div class="kontakt__info-grid">
+            <div class="kontakt__info-item">
+              <span class="kontakt__info-label">Adresse</span>
+              <p>Mosacherweg 24<br />92224 Amberg</p>
+            </div>
+            <div class="kontakt__info-item">
+              <span class="kontakt__info-label">Öffnungszeiten</span>
+              <p>
+                Mo – Fr: 09:00 – 17:30 Uhr<br />Samstag: Geschlossen<br />Sonntag:
+                Geschlossen
+              </p>
+            </div>
+            <div class="kontakt__info-item">
+              <span class="kontakt__info-label">Telefon</span>
+              <p><a href="tel:09621965488">09621 965488</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="kontakt__right">
+          <div class="kontakt__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.123456789!2d11.863!3d49.444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f6a4d0f5f5f5f%3A0x0!2sMosacherweg+24%2C+92224+Amberg!5e0!3m2!1sde!2sde!4v1699900000000!5m2!1sde!2sde"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Salon Standort"
+            ></iframe>
+          </div>
+          <a href="tel:09621965488" class="kontakt__tel-cta">
+            <span>Jetzt anrufen</span>
+            <span>09621 965488 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">C. W. Ihr Friseur</span>
+          <span class="footer__tagline">Haarsalon · Amberg seit 2009</span>
+        </div>
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+        <div class="footer__meta">
+          <span class="footer__copy">© 2025 C. W. Ihr Friseur</span>
+          <span class="footer__credit"
+            >Design &amp; Umsetzung: Fonseka-Digital</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
