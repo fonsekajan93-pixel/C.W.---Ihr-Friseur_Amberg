@@ -135,6 +135,39 @@ const iv = setInterval(() => {
 
 /* ---- NAV SCROLL ---- */
 const nav = document.getElementById("nav");
+const cleanCurrentUrl = () => {
+  const cleanPath = window.location.pathname.replace(/index\.html$/i, "");
+
+  if (cleanPath !== window.location.pathname || window.location.hash) {
+    history.replaceState(null, "", cleanPath + window.location.search);
+  }
+};
+const scrollToSection = (targetId, behavior = "smooth") => {
+  const target = targetId && document.getElementById(targetId);
+
+  if (target) {
+    target.scrollIntoView({ behavior, block: "start" });
+  }
+};
+const initialHashTarget = window.location.hash ? window.location.hash.slice(1) : "";
+let storedScrollTarget = "";
+
+try {
+  storedScrollTarget = sessionStorage.getItem("cwScrollTarget") || "";
+  sessionStorage.removeItem("cwScrollTarget");
+} catch (error) {
+  storedScrollTarget = "";
+}
+
+cleanCurrentUrl();
+
+if (storedScrollTarget || initialHashTarget) {
+  window.setTimeout(
+    () => scrollToSection(storedScrollTarget || initialHashTarget, "smooth"),
+    80,
+  );
+}
+
 window.addEventListener(
   "scroll",
   () => {
@@ -158,10 +191,31 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
 
     event.preventDefault();
     navLinks.classList.remove("open");
-    if (window.location.hash) {
-      history.replaceState(null, "", window.location.pathname + window.location.search);
-    }
+    cleanCurrentUrl();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+document.querySelectorAll("[data-scroll-target]").forEach((a) => {
+  a.addEventListener("click", (event) => {
+    const targetId = a.dataset.scrollTarget;
+    const target = targetId && document.getElementById(targetId);
+
+    event.preventDefault();
+    navLinks.classList.remove("open");
+
+    if (target) {
+      cleanCurrentUrl();
+      scrollToSection(targetId);
+      return;
+    }
+
+    try {
+      sessionStorage.setItem("cwScrollTarget", targetId);
+    } catch (error) {
+      // Navigation still works; only the section scroll is skipped.
+    }
+
+    window.location.href = a.href;
   });
 });
 
