@@ -136,7 +136,10 @@ const iv = setInterval(() => {
 /* ---- NAV SCROLL ---- */
 const nav = document.getElementById("nav");
 const cleanCurrentUrl = () => {
-  const cleanPath = window.location.pathname.replace(/index\.html$/i, "");
+  const cleanPath = window.location.pathname
+    .replace(/index\.html$/i, "")
+    .replace(/impressum\.html$/i, "impressum/")
+    .replace(/datenschutz\.html$/i, "datenschutz/");
 
   if (cleanPath !== window.location.pathname || window.location.hash) {
     history.replaceState(null, "", cleanPath + window.location.search);

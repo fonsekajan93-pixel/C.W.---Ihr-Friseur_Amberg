@@ -3,14 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weiterleitung zum Impressum | C. W. Ihr Friseur</title>
-    <link rel="canonical" href="impressum/" />
-    <meta http-equiv="refresh" content="0; url=impressum/" />
-    <script>
-      window.location.replace("impressum/");
-    </script>
+    <title>Impressum | C. W. Ihr Friseur</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <p>Weiter zum <a href="impressum/">Impressum</a>.</p>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+      <div class="loader__inner">
+        <span class="loader__text">C. W. Ihr Friseur</span>
+        <div class="loader__bar">
+          <div class="loader__fill" id="loaderFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <a class="nav__brand" href="index.html" aria-label="Zur Startseite">
+        <span class="nav__brand-main">C. W.</span>
+        <span class="nav__brand-sub">Ihr Friseur</span>
+      </a>
+      <div class="nav__center">
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html" data-scroll-target="leistungen">Leistungen</a></li>
+          <li><a href="index.html" data-scroll-target="team">Unser Team</a></li>
+          <li><a href="index.html" data-scroll-target="kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="nav__right">
+        <a href="tel:09621965488" class="nav__tel">09621 965488</a>
+        <a href="index.html" data-scroll-target="kontakt" class="nav__cta"
+          ><span>Termin anfragen</span></a
+        >
+        <button class="nav__toggle" id="navToggle" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="legal-page">
+      <section class="legal-hero">
+        <div class="legal-hero__inner">
+          <div>
+            <span class="tag">— Anbieterkennzeichnung</span>
+            <h1>Impressum</h1>
+            <p>
+              Transparente Angaben zum Anbieter dieser Website und zu den
+              rechtlich verantwortlichen Kontaktdaten von C. W. Ihr Friseur.
+            </p>
+          </div>
+          <a class="legal-back" href="index.html">
+            <span>Zurück zur Startseite</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="legal-content" aria-label="Impressumsangaben">
+        <div class="legal-grid">
+          <aside class="legal-card legal-card--dark">
+            <span class="legal-kicker">C. W. Ihr Friseur</span>
+            <h2>Kontakt zum Salon</h2>
+            <dl class="legal-contact">
+              <div>
+                <dt>Adresse</dt>
+                <dd>Mosacherweg 24<br />92224 Amberg</dd>
+              </div>
+              <div>
+                <dt>Telefon</dt>
+                <dd><a href="tel:09621965488">09621 965488</a></dd>
+              </div>
+              <div>
+                <dt>E-Mail</dt>
+                <dd>kelly.amberg1980@werb.de</dd>
+              </div>
+            </dl>
+          </aside>
+
+          <div class="legal-sections">
+            <section class="legal-section">
+              <span class="legal-kicker">Angaben gemäß § 5 DDG</span>
+              <h2>Anbieter</h2>
+              <p>
+                C. W. Ihr Friseur<br />
+                Inhaberin: Cristiane Wendel<br />
+                Mosacherweg 24<br />
+                92224 Amberg
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <span class="legal-kicker">Vertreten durch</span>
+              <h2>Verantwortliche Person</h2>
+              <p>
+                Verantwortlich für den Inhalt dieser Website ist Christiane
+                Wendel, Anschrift wie oben.
+              </p>
+            </section>
+            <!--            <section class="legal-section">
+              <span class="legal-kicker">Steuerangaben</span>
+              <h2>Umsatzsteuer</h2>
+              <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27a
+                Umsatzsteuergesetz: [falls vorhanden ergänzen]
+              </p>
+            </section>-->
+
+            <section class="legal-section">
+              <span class="legal-kicker">Verbraucherstreitbeilegung</span>
+              <h2>Streitbeilegung</h2>
+              <p>
+                Wir sind nicht verpflichtet und nicht bereit, an
+                Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <span class="legal-kicker">Website-Inhalte</span>
+              <h2>Haftung für Inhalte</h2>
+              <p>
+                Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die
+                Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann
+                dennoch keine Gewähr übernommen werden.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <span class="legal-kicker">Externe Verweise</span>
+              <h2>Haftung für Links</h2>
+              <p>
+                Diese Website kann Links zu externen Websites enthalten. Auf
+                deren Inhalte haben wir keinen Einfluss; für diese Inhalte ist
+                stets der jeweilige Anbieter oder Betreiber verantwortlich.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">C. W. Ihr Friseur</span>
+          <span class="footer__tagline">Haarsalon · Amberg seit 2009</span>
+        </div>
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <a href="impressum.html" aria-current="page">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+        <div class="footer__meta">
+          <span class="footer__copy">© 2025 C. W. Ihr Friseur</span>
+          <span class="footer__credit">Design &amp; Umsetzung: Fonseka-Digital</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
