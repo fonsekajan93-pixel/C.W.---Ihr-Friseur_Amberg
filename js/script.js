@@ -325,6 +325,7 @@ if (teamProfilesCarousel) {
   const profileReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let activeTeamProfile = 0;
   let profileScrollTimer;
+  let lastProfileViewportWidth = window.innerWidth;
 
   const updateTeamProfileState = (index) => {
     activeTeamProfile = (index + teamProfileCards.length) % teamProfileCards.length;
@@ -355,9 +356,18 @@ if (teamProfilesCarousel) {
     }
 
     const nextIndex = (index + teamProfileCards.length) % teamProfileCards.length;
-    teamProfileCards[nextIndex].scrollIntoView({
-      block: "nearest",
-      inline: "center",
+    const card = teamProfileCards[nextIndex];
+    const maxScrollLeft = teamProfilesTrack.scrollWidth - teamProfilesTrack.clientWidth;
+    const targetLeft = Math.min(
+      maxScrollLeft,
+      Math.max(
+        0,
+        card.offsetLeft - (teamProfilesTrack.clientWidth - card.offsetWidth) / 2,
+      ),
+    );
+
+    teamProfilesTrack.scrollTo({
+      left: targetLeft,
       behavior: profileReducedMotion.matches ? "auto" : "smooth",
     });
     updateTeamProfileState(nextIndex);
@@ -390,6 +400,26 @@ if (teamProfilesCarousel) {
       { passive: true },
     );
 
-    window.addEventListener("resize", () => showTeamProfile(activeTeamProfile));
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.innerWidth === lastProfileViewportWidth) {
+          return;
+        }
+
+        lastProfileViewportWidth = window.innerWidth;
+        teamProfilesTrack.scrollLeft = Math.min(
+          teamProfilesTrack.scrollWidth - teamProfilesTrack.clientWidth,
+          Math.max(
+            0,
+            teamProfileCards[activeTeamProfile].offsetLeft -
+              (teamProfilesTrack.clientWidth -
+                teamProfileCards[activeTeamProfile].offsetWidth) /
+                2,
+          ),
+        );
+      },
+      { passive: true },
+    );
   }
 }
