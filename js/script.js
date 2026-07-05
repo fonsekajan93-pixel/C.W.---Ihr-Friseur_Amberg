@@ -147,11 +147,23 @@ window.addEventListener(
 const toggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 toggle.addEventListener("click", () => navLinks.classList.toggle("open"));
-navLinks
-  .querySelectorAll("a")
-  .forEach((a) =>
-    a.addEventListener("click", () => navLinks.classList.remove("open")),
-  );
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener("click", (event) => {
+    const targetId = a.getAttribute("href");
+    const target = targetId && document.getElementById(targetId.slice(1));
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    navLinks.classList.remove("open");
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
 
 /* ---- SCROLL REVEAL ---- */
 const observer = new IntersectionObserver(
