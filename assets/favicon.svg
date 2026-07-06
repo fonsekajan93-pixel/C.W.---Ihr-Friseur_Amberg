@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="C. W. Ihr Friseur">
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Italiana";
+        src: url("fonts/italiana-v21-400-latin.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .mark {
+        font-family: "Italiana", Georgia, serif;
+        font-size: 78px;
+        letter-spacing: 0;
+        fill: #f7f4ec;
+      }
+    </style>
+    <radialGradient id="silverGlow" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#f7f4ec" stop-opacity="0.3" />
+      <stop offset="52%" stop-color="#9f9f98" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#050505" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ring" x1="50" y1="28" x2="206" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="45%" stop-color="#b9b9b2" />
+      <stop offset="100%" stop-color="#6f6f6a" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#060606" />
+  <rect x="14" y="14" width="228" height="228" rx="48" fill="url(#silverGlow)" />
+  <rect x="26" y="26" width="204" height="204" rx="40" fill="none" stroke="url(#ring)" stroke-width="5" />
+  <text class="mark" x="128" y="144" text-anchor="middle">C. W.</text>
+  <path d="M70 168H186" stroke="#d8d5cd" stroke-width="3" stroke-linecap="round" opacity="0.72" />
+</svg>
